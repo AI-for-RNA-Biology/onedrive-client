@@ -3,13 +3,13 @@
 
 Microsoft OneDrive provided by the University of Bern does not allow access via `rclone`. This makes it less convenient to transfer files programmatically on an HPC.
 
-One option is to create a share link for each file (select a file, click on three dots `...` → share → settings → "Anyone"). You can use the link to download directly via `wget` or `curl` by appending `&download=1` to the end of the link:
+One option is to create a share link for each file (select a file, click on three dots `...` → share → settings → "Anyone"). You can use the link to download directly with `wget` or `curl` by appending `&download=1` to the end of the link:
 ```
 # Example share link:
 sharelink="https://unibe365-my.sharepoint.com/:u:/g/personal/xxx/IQAKnc?e=nxuIgG"
 
-# filename won't resolve automatically, must declare
 # wrap link in quotes
+# filename won't resolve automatically, must declare
 wget -O myfile.gz "${sharelink}&download=1"
 ```
 
