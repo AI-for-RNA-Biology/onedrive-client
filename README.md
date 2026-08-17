@@ -2,7 +2,10 @@
 *Instructions on how to use onedrive client on Linux*
 
 Microsoft OneDrive provided by the University of Bern does not allow access via `rclone`. This makes it less convenient to transfer files programmatically on an HPC.
-A workaround is to use the [onedrive client](https://github.com/abraunegg/onedrive) for linux.
+
+One option is to create a share link for each file (select a file, click on three dots `...` → share → settings → "Anyone"). You can use the link to download directly via `wget` or `curl` by appending `&download=1` to the end of the link.
+
+However, this method is not practical if you have a large number of files or subfolders. A workaround is to use the [onedrive client](https://github.com/abraunegg/onedrive) for linux.
 
 Below are instructions on how to set it up and use it on UBELIX; however, the same applies to any Linux machine.
 
